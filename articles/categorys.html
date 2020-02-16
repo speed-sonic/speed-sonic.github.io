@@ -1,0 +1,11 @@
+---
+layout: default
+permalink: /categorys/
+styles: [test.css]
+---
+
+{% for category in site.categories %}
+
+{{ category | first }}
+{{ category | last | size }}<br />
+{% endfor %}
