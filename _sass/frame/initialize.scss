@@ -2,7 +2,12 @@
 
 // Define defaults for each variable.
 
-$base-font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+@font-face {
+  font-family: 'Georgia';
+  src: url('../font/Georgia.ttf');
+}
+
+$base-font-family: Helvetica,Georgia,Arial,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","华文细黑","Source Han Sans CN","Noto Sans SC","WenQuanYi Micro Hei",SimSun,sans-serif;
 $code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;

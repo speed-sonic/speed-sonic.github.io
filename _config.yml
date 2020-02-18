@@ -32,9 +32,18 @@ paginate: 6
 paginate_path: "/articles/:num/"
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 kramdown:
   input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  enable_coderay: true
+  auto_ids: true
+  extensions:
+    - autolink
+    - smart
+  # syntax_highlighter_opts:
+  #   line_numbers: nil
 
 
 sass:

@@ -20,6 +20,8 @@ $color-pencil:       #1a1a1a;
 $color-primary:      #fdfdfd;
 $color-link:         #2a7ae2;
 $color-grey:   #828282;
+$color-lavender-blush: #FFC0CB;
+$color-silver:  #C0C0C0;
 
 $sol-mono3:    $sol-base3;
 $sol-mono2:    $sol-base2;
@@ -68,7 +70,10 @@ $theme-colors: (
   "primary":  $color-primary,
   "link":     $color-link,
   "grey":         $color-grey,
-  "lightgrey": #8c8c8c
+  "lightgrey": #8c8c8c,
+  "lavender-blush": $color-lavender-blush,
+  "silver": $color-silver,
+  "coral": #F08080
 ) !default;
 
 // 字体宽度

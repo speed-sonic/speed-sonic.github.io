@@ -14,7 +14,7 @@ tags: DI IoC 容器 框架
 
 ## 构建应用的核心
 首先我们需要一个容器作为`依赖查找器`，调用策略我们选择 `Vargs` 配合 `Delay` 组件进行延迟初始化处理。我们要做的是，当对象初始化的时候，将容器对象作为构造方法的参数传入即可。
-```php
+~~~php
 use ConstanzeStandard\Container\Container;
 use ConstanzeStandard\Fluff\RequestHandler\Delay;
 use ConstanzeStandard\Fluff\RequestHandler\Vargs;
@@ -27,7 +27,9 @@ $strategy = function($className, $method) use ($container) {
 };
 
 $definition = Delay::getDefinition($strategy, Vargs::getDefinition());
-```
+~~~
+{: #code-example-1}
+
 如上例所示，我们现在创建了一个`延迟策略`，它会在 Request 传递到 Request Handler 时自动完成类的初始化，并且将 `container` 作为初始化参数传递。
 
 接下来，我们需要将这个策略应用到路由派发系统（Dispatcher）中，使得每一次的请求处理都继承这一策略。最后将构建好的核心传入 Application 激活应用。

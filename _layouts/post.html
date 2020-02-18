@@ -12,7 +12,7 @@ layout: page
       </time>
     </div>
     <span class="" style="font-size:.9rem;">
-      {%- include /public/post-tags.html source="tags" icon="tag" color="lightgrey" -%}
+      {%- include /public/post-tags.html source="tags" icon="tag" color="silver" -%}
     </span>
   </div>
 
@@ -21,9 +21,15 @@ layout: page
 
 <script>
   $(function() {
-    var hashtag = '<i class="fas fa-hashtag text-cyan" style="margin-right:.3em;"></i>'
-    $(':header').each(function() {
+    function makeWrapper(id) {
+      var hashtag = '<a href="#'+ id +'" class="text-link text-decoration-none">\
+      <i class="fas fa-hashtag" style="margin-right:.3em;"></i>\
+      </a>';
+      return hashtag;
+    }
+    $('.article-post :header').not('.title').each(function() {
       var text = $(this).text();
+      var hashtag = makeWrapper($(this).prop('id'));
       $(this).html(hashtag + text);
     });
   });

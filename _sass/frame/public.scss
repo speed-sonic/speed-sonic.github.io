@@ -67,3 +67,10 @@
     }
   }
 }
+
+.post-list {
+  padding:1rem 0;
+  &:not(:last-child) {
+    @extend .border-bottom;
+  }
+}

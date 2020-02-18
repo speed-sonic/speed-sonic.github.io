@@ -48,6 +48,8 @@ header.site-header {
       display: block;
       margin: 0;
       .page-link {
+        display: inline-block;
+        width: 100%;
         color: $text-sec-color;
         font-size: $small-link-size;
         // Gaps between nav items, but not on the last one
