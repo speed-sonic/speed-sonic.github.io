@@ -32,6 +32,10 @@ body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 
+  .bg-light {
+    background-color: $background-color !important;
+  }
+
   .container {
     clear: both;
     .content {
@@ -55,6 +59,16 @@ body {
       }
       &:hover {
         color: $link-hover-color
+      }
+    }
+
+    &.link-dark {
+      color: $sol-base02;
+      &:visited {
+        color: $sol-base02;
+      }
+      &:hover {
+        color: $sol-base01;
       }
     }
   }

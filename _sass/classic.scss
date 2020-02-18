@@ -20,8 +20,9 @@ $color-pencil:       #1a1a1a;
 $color-primary:      #fdfdfd;
 $color-link:         #2a7ae2;
 $color-grey:   #828282;
-$color-lavender-blush: #FFC0CB;
+$color-lavender-blush: #FFF0F5;
 $color-silver:  #C0C0C0;
+$color-dodger: #1E90FF;
 
 $sol-mono3:    $sol-base3;
 $sol-mono2:    $sol-base2;
@@ -69,11 +70,14 @@ $theme-colors: (
   "pencil-sec": $text-sec-color,
   "primary":  $color-primary,
   "link":     $color-link,
+  "link-hover": $link-hover-color,
   "grey":         $color-grey,
   "lightgrey": #8c8c8c,
   "lavender-blush": $color-lavender-blush,
   "silver": $color-silver,
-  "coral": #F08080
+  "coral": #F08080,
+  "dodger": $color-dodger,
+  "khaki": #FFA500
 ) !default;
 
 // 字体宽度

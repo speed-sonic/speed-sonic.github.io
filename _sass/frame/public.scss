@@ -74,3 +74,38 @@
     @extend .border-bottom;
   }
 }
+
+
+.news-board {
+  .news {
+    padding: 1rem 0;
+    &:not(:last-child) {
+      @extend .border-bottom;
+    }
+    .title {
+      font-size: 1.2rem;
+    }
+    img {
+      max-width: 100%;
+    }
+    .row {
+      display: flex;
+      @include media-query($on-medium) {
+        display: block;
+      }
+      .col {
+        height: auto;
+        color: #828282;
+        &.left {
+          flex: none;
+          width: 20%;
+          margin-right: 1rem;
+          @include media-query($on-medium) {
+            width: auto;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

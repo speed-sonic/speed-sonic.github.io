@@ -2,7 +2,7 @@
   {%- assign post = include.post -%}
   <span class="post-meta text-pencil-sec">{{ post.date | date: date_format }}</span>
   <h3>
-    <a class="text-decoration-none link" href="{{ post.url | relative_url }}">
+    <a class="text-decoration-none link-dark" href="{{ post.url | relative_url }}">
       {{ post.title | escape }}
     </a>
   </h3>

@@ -1,6 +1,10 @@
 footer.site-footer {
-  border-top: 1px solid $brand-color-light;
   padding: 30px 0;
+
+  .content .first {
+    padding: 30px 0;
+    border-top: 1px solid $brand-color-light;
+  }
 
   .svg-icon {
     width: 16px;

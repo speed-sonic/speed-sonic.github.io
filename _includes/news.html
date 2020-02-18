@@ -1,0 +1,23 @@
+<div class="news-board">
+  {%- for news in site.news -%}
+
+  <div class="news">
+    <h2 class="title">
+      <a class="link-dark text-decoration-none text-normal" href="{{ news[1] | relative_url }}">
+        {{ news[0] }}
+      </a>
+    </h2>
+    <div class="row">
+      <div class="col left">
+        <img src="{{ news[2] }}" alt="{{ news[0] }}" title="{{ news[0] }}" />
+      </div>
+      <div class="col">
+        <p class="view text-small">
+          {{ news[3] }} <a class="link text-small" href="{{ news[1] | relative_url }}">查看详情 >></a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {%- endfor -%}
+</div>

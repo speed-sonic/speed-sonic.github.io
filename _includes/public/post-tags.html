@@ -12,7 +12,7 @@
     {% assign tags = page[include.source] %}
   {% endif %}
   {% for tag in tags %}
-  <a class="link text-decoration-none" href="{{site.baseurl}}/{{ include.source }}/#{{tag|slugize}}">
+  <a class="text-base00 text-decoration-none" href="{{site.baseurl}}/{{ include.source }}/#{{tag|slugize}}">
     {{tag}}
   </a>
   {% unless forloop.last %},{% endunless %}
