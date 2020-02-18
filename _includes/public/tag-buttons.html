@@ -1,0 +1,8 @@
+<!-- tag-buttons -->
+{%- assign data = site[include.source] -%}
+<div class="tag-buttons">
+  {% for tag in data %}
+    {% capture name %}{{ tag | first }}{% endcapture %}
+    <a href="{{site.baseurl}}/{{ include.source }}/#{{name|slugize}}" class="item text-decoration-none link">{{ name | slugize }}</a>
+  {% endfor %}
+</div>

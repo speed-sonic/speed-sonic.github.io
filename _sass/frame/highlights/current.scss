@@ -1,0 +1,12 @@
+@import "tomorrow_night";
+
+.highlighter-rouge {
+  border-radius: 7px;
+  .highlight {
+    border-color: #EEE;
+  }
+}
+
+figure > img {
+  display: block;
+}

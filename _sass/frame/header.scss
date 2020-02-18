@@ -5,8 +5,8 @@ header.site-header {
 
   border-top: 4px solid $brand-color-dark;
   border-bottom: 1px solid $brand-color-light;
-  min-height: 55px;
   line-height: $base-line-height * $base-font-size * 2.25;
+  width: 100%;
 
   a.site-title {
     display: block;
@@ -56,6 +56,10 @@ header.site-header {
         }
         &:hover {
           color: $brand-color-dark;
+        }
+
+        &.active {
+          color: $sol-blue;
         }
       }
     }

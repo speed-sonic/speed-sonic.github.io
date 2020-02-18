@@ -10,5 +10,17 @@
   {% for style in page.styles %}
   <link rel="stylesheet" type="text/css" href="{{ '/assets/css/' | append: style | relative_url }}" />
   {%endfor%}
+
+  <link rel="stylesheet" href="{{ '/assets/fontawsome/all.min.css' | relative_url }}" />
+  <script src="{{ '/assets/fontawsome/all.min.js' | relative_url }}"></script>
   <title>{{ site.title }}</title>
+
+  <script src="{{ '/assets/js/jquery-3.4.1.slim.min.js' | relative_url }}"></script>
+  <script>
+    function makeRandom(min, max) {
+      const range = max - min;   
+      const rand = Math.random();   
+      return(min + Math.round(rand * range));  
+    }
+  </script>
 </head>

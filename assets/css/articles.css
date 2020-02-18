@@ -1,0 +1,24 @@
+
+.post-meta {
+  font-size: 14px;
+}
+
+.post-list {
+  margin-bottom: 2rem;
+}
+
+.pagination {
+  clear: both;
+  float: left;
+  border-radius: 5px;
+}
+.pagination .pagination-list a, .pagination .pagination-list div {
+  display: inline-block;
+  padding: .4rem;
+}
+.pagination .pagination-list {
+  font-size: .8rem;
+  width: auto;
+  border: 1px dashed #CCC;
+  margin-right: .3rem;
+}

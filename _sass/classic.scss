@@ -1,4 +1,4 @@
-$sol-is-dark: false;
+$sol-is-dark: true;
 
 $sol-base03:   #002b36;  // 15 -12 -12
 $sol-base02:   #073642;  // 20 -12 -12
@@ -16,6 +16,10 @@ $sol-violet:   #6c71c4;  // 50  15 -45
 $sol-blue:     #268bd2;  // 55 -10 -45
 $sol-cyan:     #2aa198;  // 60 -35 -05
 $sol-green:    #859900;  // 60 -20  65
+$color-pencil:       #1a1a1a;
+$color-primary:      #fdfdfd;
+$color-link:         #2a7ae2;
+$color-grey:   #828282;
 
 $sol-mono3:    $sol-base3;
 $sol-mono2:    $sol-base2;
@@ -35,12 +39,52 @@ $brand-color:           #828282 !default;
 $brand-color-light:     lighten($brand-color, 40%) !default;
 $brand-color-dark:      darken($brand-color, 25%) !default;
 
-$text-color:            #1a1a1a !default;
+$text-color:            $color-pencil !default;
 $text-sec-color:        lighten($text-color, 35%) !default;
-$background-color:      #fdfdfd !default;
+$background-color:      $color-primary !default;
 
-$link-base-color:       #2a7ae2 !default;
-$link-visited-color:    darken($link-base-color, 15%) !default;
+$link-base-color:       $color-link !default;
+$link-hover-color:    darken($link-base-color, 15%) !default;
+
+$theme-colors: (
+  "base03":   $sol-base03,
+  "base02":   $sol-base02,
+  "base01":   $sol-base01,
+  "base00":   $sol-base00,
+  "base0":    $sol-base0,
+  "base1":    $sol-base1,
+  "base2":    $sol-base2,
+  "base3":    $sol-base3,
+  "yellow":   $sol-yellow,
+  "orange":   $sol-orange,
+  "red":      $sol-red,
+  "magenta":  $sol-magenta,
+  "violet":   $sol-violet,
+  "blue":     $sol-blue,
+  "cyan":     $sol-cyan,
+  "green":    $sol-green,
+  "pencil":   $color-pencil,
+  "pencil-sec": $text-sec-color,
+  "primary":  $color-primary,
+  "link":     $color-link,
+  "grey":         $color-grey,
+  "lightgrey": #8c8c8c
+) !default;
+
+// 字体宽度
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-sizes: (
+  "lighter": $font-weight-lighter,
+  "light": $font-weight-light,
+  "normal": $font-weight-normal,
+  "bold": $font-weight-bold,
+  "bolder": $font-weight-bolder
+) !default;
 
 @import
   "frame/initialize"

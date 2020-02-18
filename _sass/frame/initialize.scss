@@ -2,7 +2,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: -apple-system,"Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft Yahei",sans-serif;
+$base-font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
 $code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
@@ -19,8 +19,38 @@ $on-large:         800px !default;
   }
 }
 
+/**
+ * Code formatting
+ */
+ pre,
+ code {
+   font-family: $code-font-family;
+   font-size: 0.9375em;
+   border: 1px solid $brand-color-light;
+   border-radius: 3px;
+ }
+ 
+ code {
+   padding: 1px 5px;
+ }
+ 
+ pre {
+   padding: 8px 12px;
+   overflow-x: auto;
+ 
+   > code {
+     border: 0;
+     padding-right: 0;
+     padding-left: 0;
+   }
+ }
+
 @import
-  "color",
+  "_root",
   "base",
-  "header"
+  "header",
+  "highlights/current",
+  "public",
+  "post",
+  "footer"
 ;

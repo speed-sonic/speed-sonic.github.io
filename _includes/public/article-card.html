@@ -1,0 +1,17 @@
+<li class="list-type-none post-list">
+  {%- assign post = include.post -%}
+  <span class="post-meta text-pencil-sec">{{ post.date | date: date_format }}</span>
+  <h3>
+    <a class="text-decoration-none link" href="{{ post.url | relative_url }}">
+      {{ post.title | escape }}
+    </a>
+  </h3>
+  <!-- 摘要 -->
+  {%- if site.show_excerpts -%}
+  <span class="text-pencil-sec text-small">{{ post.excerpt }}</span>
+  {%- endif -%}
+  <div class="text-smaller">
+    {%- include /public/post-tags.html source="categories" icon="pen-nib" color="green" -%}
+    {%- include /public/post-tags.html source="tags" icon="tag" color="violet" -%}
+  </div>
+</li>

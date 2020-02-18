@@ -1,7 +1,30 @@
 ---
-layout: default
+layout: page
 ---
-<article>
-  {% include post-categories.html %}
-  POST
+<article class="article-post padding-page">
+  <div class="post-header">
+    <h1 class="title">{{ page.title }}</h1>
+    <div class="post-info text-lightgrey text-small">
+      <span class="text-bold">创作于</span>
+      {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: date_format }}
+      </time>
+    </div>
+    <span class="" style="font-size:.9rem;">
+      {%- include /public/post-tags.html source="tags" icon="tag" color="lightgrey" -%}
+    </span>
+  </div>
+
+  {{ content }}
 </article>
+
+<script>
+  $(function() {
+    var hashtag = '<i class="fas fa-hashtag text-cyan" style="margin-right:.3em;"></i>'
+    $(':header').each(function() {
+      var text = $(this).text();
+      $(this).html(hashtag + text);
+    });
+  });
+</script>

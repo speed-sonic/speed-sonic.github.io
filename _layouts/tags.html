@@ -1,0 +1,17 @@
+---
+layout: page
+---
+<div id="tags" class="padding-page">
+  {%- assign data = site[page.source] -%}
+  {%- include public/page-header.html icon=page.title_icon color=page.title_color -%}
+
+  <div class="tags-group text-smaller" style="padding:1rem 1rem 0 0;">
+  {% include /public/tag-buttons.html source=page.source %}
+  </div>
+
+  <div class="" style="margin:2rem 0;">
+    {% for category in data %}
+      {% include /public/tag-item.html tag=category %}
+    {% endfor %}
+  </div>
+</div>

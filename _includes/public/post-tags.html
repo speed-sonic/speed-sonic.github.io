@@ -1,0 +1,20 @@
+{%- assign data = site[include.source] -%}
+
+<div class="post-tags">
+  {%- if include.icon -%}
+  <span class="text-bold text-{{ include.color }}" style="margin-right:.5em;">
+    <i class="fas fa-{{ include.icon }}"></i>
+  </span>
+  {%- endif -%}
+  {% if post %}
+    {% assign tags = post[include.source] %}
+  {% else %}
+    {% assign tags = page[include.source] %}
+  {% endif %}
+  {% for tag in tags %}
+  <a class="link text-decoration-none" href="{{site.baseurl}}/{{ include.source }}/#{{tag|slugize}}">
+    {{tag}}
+  </a>
+  {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+</div>

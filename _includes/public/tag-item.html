@@ -1,0 +1,24 @@
+<div class="tag-item">
+  {% capture name %}{{ include.tag | first }}{% endcapture %}
+  <div id="{{ name | slugize }}"></div>
+  <p></p>
+
+  <h3 class="header text-bold" id="{{ name }}">
+    <a class="hash text-pencil-sec text-decoration-none" href="#{{ name | slugize }}">
+      #{{ name | slugize }}
+    </a>
+  </h3>
+  {%- assign date_format = "%Y-%m-%d %H:%m" -%}
+  {% for post in data[name] %}
+  <article>
+    <h4 class="text-normal break-word">
+      <div class="item-content">
+        <time class="text-small text-pencil-sec time" datetime="{{ mdate }}" itemprop="dateModified">
+          {{ post.date | date: date_format }}
+        </time>
+        <a class="link" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+      </div>
+    </h4>
+  </article>
+  {% endfor %}
+</div>

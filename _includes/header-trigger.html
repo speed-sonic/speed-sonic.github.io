@@ -8,9 +8,19 @@
 </label>
 
 <div class="trigger">
+
+  {%- assign tag = "articles" -%}
+  {%- if page.tag -%}
+  {%- assign tag = page.tag -%}
+  {%- endif -%}
+
   {%- for link in site.navlinks -%}
   <div class="nav-button">
-    <a class="page-link text-decoration-none" href="{{ link[1] }}">
+    {%- assign css = "" -%}
+    {%- if link[2] == tag -%}
+    {%- assign css = " active" -%}
+    {%- endif -%}
+    <a class="page-link text-decoration-none{{ css }}" href="{{ link[1] }}">
       {{ link[0] }}
     </a>
   </div>

@@ -1,7 +1,10 @@
 ---
-layout: default
+layout: page
+title: 文章
+styles: [articles.css]
+tag: articles
 ---
-<div class="articles">
+<div class="padding-page">
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
   {% else %}
@@ -9,54 +12,41 @@ layout: default
   {% endif %}
 
   {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-    <h2>{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul>
-      {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
+    {%- include public/page-header.html icon="feather" color="violet" -%}
+    <ul class="padding-page">
+      {%- assign date_format = "%Y-%m-%d" -%}
       {%- for post in posts -%}
-      <li>
-        <span>{{ post.date | date: date_format }}</span>
-        <h3>
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        <!-- 摘要 -->
-        {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-        {%- endif -%}
-      </li>
+        {%- include /public/article-card.html post=post -%}
       {%- endfor -%}
     </ul>
 
-    {% if site.paginate %}
+    <!-- 分页器 -->
+    {% if site.paginate and paginator.total_pages > 1 %}
     <div>
-      <ul>
+      <ul class="pagination">
         <!-- 前一页 -->
         {%- if paginator.previous_page %}
-        <li>
-          <a href="{{ paginator.previous_page_path | relative_url }}">
-            {{ paginator.previous_page }}
+        <li class="list-type-none float-left pagination-list">
+          <a class="text-decoration-none link" href="{{ paginator.previous_page_path | relative_url }}">
+            上一页
           </a>
-        </li>
-        {%- else %}
-        <li>
-          <div>•</div>
         </li>
         {%- endif %}
         <!-- 当前页 -->
-        <li>
+        <li class="list-type-none  float-left pagination-list">
           <div>{{ paginator.page }}</div>
         </li>
         <!-- 后一页 -->
         {%- if paginator.next_page %}
-        <li><a href="{{ paginator.next_page_path | relative_url }}">{{ paginator.next_page }}</a></li>
-        {%- else %}
-        <li>
-          <div>•</div>
+        <li class="list-type-none  float-left pagination-list">
+          <a class="text-decoration-none link" href="{{ paginator.next_page_path | relative_url }}">
+            下一页
+          </a>
         </li>
         {%- endif %}
+        <li class="list-type-none float-left pagination-list border-none text-pencil-sec">
+          <div>{{ paginator.page }}/{{ paginator.total_pages }}</div>
+        </li>
       </ul>
     </div>
     {%- endif %}

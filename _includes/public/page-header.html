@@ -1,0 +1,31 @@
+<!-- page-header -->
+<!-- 
+页面的头部文字
+ -->
+{%- if page.title -%}
+<div class="page-header">
+  <h1 class="page-title text-light text-{{ include.color }}">
+    <i class="fas fa-{{ include.icon }}"></i> {{ page.title }}
+    <small id="page-header-small-title"></small>
+  </h1>
+  <a
+    class="rss-button border text-decoration-none text-{{ include.color }}"
+    href="{{ '/feed.rss' | relative_url }}"
+    target="_blank"
+  >
+    <i class="fas fa-rss"></i>
+    订阅我的 RSS
+  </a>
+</div>
+{%- endif -%}
+<script>
+  var verses = [
+    "竹杖芒鞋轻胜马，谁怕，一蓑烟雨任平生。",
+    "人生到处知何似，应似飞鸿踏雪泥。",
+    "人生若只如初见，何事秋风悲画扇。",
+    "无可奈何花落去，似曾相识燕归来。"
+  ];
+  var random = makeRandom(0, verses.length - 1);
+  var element = document.getElementById('page-header-small-title');
+  element.innerText = verses[random];
+</script>
