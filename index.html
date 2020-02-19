@@ -18,20 +18,20 @@ tag: home
     <div class="content">
       <!-- 文章 -->
       <div class="integrated">
-        {%- include /public/board-header.html text="新文章" color="link-hover" url="/articles/" -%}
+        {%- include public/board-header.html text="新文章" color="link-hover" url="/articles/" -%}
         {% assign posts = site.posts | sort: 'date' | slice: 0, 4 %}
         {%- if posts.size > 0 -%}
         <ul class="article-list">
           {%- assign date_format = "%Y-%m-%d" -%}
           {%- for post in posts -%}
-          {%- include /public/article-card.html -%}
+          {%- include public/article-card.html -%}
           {%- endfor -%}
         </ul>
         {% endif %}
       </div>
       <!-- 综合展示 -->
       <div class="integrated">
-        {%- include /public/board-header.html text="新鲜事" color="cyan" -%}
+        {%- include public/board-header.html text="新鲜事" color="cyan" -%}
         <div class="notices-board">
           {%- for news in site.news -%}
           {%- assign title = news[0] -%}
@@ -40,7 +40,7 @@ tag: home
           {%- assign excerpt = news[3] -%}
           {%- assign detail_url = news[1] -%}
           {%- assign project_url = news[4] -%}
-          {%- include /public/notice.html title=title url=url image=image excerpt=excerpt detail_url=detail_url project_url=project_url -%}
+          {%- include public/notice.html title=title url=url image=image excerpt=excerpt detail_url=detail_url project_url=project_url -%}
           {%- endfor -%}
         </div>
       </div>
