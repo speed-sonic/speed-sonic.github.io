@@ -1,0 +1,18 @@
+<div class="modal-wrapper" id="modal-wrapper"></div>
+<div class="modal bg-primary" id="modal">
+  <div class="modal-header text-pencil text-bold border-bottom">
+    通知
+    <a class="close text-pencil float-right text-decoration-none" href="#">X</a>
+  </div>
+  <div class="modal-body break-word">
+    你好。
+  </div>
+  <div class="func">
+    <a class="cancel btn text-pencil-sec" href="#">取消</a>
+  </div>
+</div>
+<script>
+  $('.close, .cancel').click(function() {
+    $('#modal-wrapper, #modal').hide();
+  });
+</script>

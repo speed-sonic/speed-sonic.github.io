@@ -13,9 +13,8 @@
     padding-left: 1rem;
   }
   .rss-button {
-    display: block;
-    float: right;
-    font-size: .7rem;
+    @extend .user-select-none;
+    font-size: .8rem;
     padding: .5rem;
     border-radius: 5px;
     @include media-query($on-medium) {
@@ -114,6 +113,27 @@
             max-width: 100%;
           }
         }
+      }
+    }
+  }
+}
+
+.friends {
+  * {
+    border-radius: 1rem;
+  }
+  .friend {
+    margin: 2.5%;
+    width: 20%;
+    display: inline-block;
+    @include media-query($on-medium) {
+      width: 40%;
+      &:nth-child(even) {
+        margin-left: 10%;
+      }
+      margin-right: 0;
+      img {
+        width: 100%;
       }
     }
   }

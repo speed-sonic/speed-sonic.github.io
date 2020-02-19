@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "Canvas 小游戏【贪吃蛇大作战】的制作"
+date:   2020-02-19 21:51:20 +0800
+# modified_date: 2020-02-19 21:51:20 +0800
+categories: 游戏制作 前端
+tags: javascript h5 canvas
+---
+疫情肆虐的这段时间在家做了一个小游戏，前前后后花了近4天时间，因为之前也没有做过这么烧脑的（对于我来说）前端项目，所以绕了很多弯路，但最后终于实现了基本的游戏模式。这篇博文主要是对其中涉及到的技术和算法进行总结，希望下一个项目能更顺利些...
+
+## 工具的选择
+之前做过几个小游戏，一开始想的比较简单，而做到最后发现，这种像素游戏需要顾及的细节太多了，各种各样的状态维护起来非常麻烦。所以这次我决定不再硬肝原生 JS，而是选用更加适合阅读和维护的 `Typescript`，然后用 webpack 打包应用程序。安装依赖组件如下：
+```sh
+yarn add webpack \
+    webpack-cli \
+    webpack-dev-server \
+    typescript ts-loader \
+    css-loader \
+    style-loader \
+    node-sass \
+    sass-loader \
+    file-loader \
+    copy-webpack-plugin
+```
+
+这样一来就比较齐全了，打包和构建都交给 webpack 就好。
+
+## 项目的架构
+应用的结构如下图所示，针对每一帧的刷新和各种元素渲染，我们把它抽象为一个`模型-视图模式`或称`观察者模式`。当画面刷新时，`Subject` 会发出信号，通知每一个 `Observer`，`Observer` 更新自己内部的状态，如果状态改变，就更新对应的 Canvas 视图。
+
+![观察者模式]({{ "/assets/image/post/2020-02-19/observer.png" | absolute_url }})  
+【手动画图 (T_T)】
+
+在上述核心概念的基础上，还要加一层 Action 抽象，用来控制游戏动画的开始，暂停和结束，它负责向 `Observer` 提供画面刷新的信息，具体实现就是将 [`AnimationFrame`](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame) 每一帧的 timestamp 发送给 `Subject` 接口，以提供刷新的状态和时间。
+
+```typescript
+interface ActionInterface {
+  isRunning: boolean;
+  start(): void;
+  pause(): void;
+  stop(): void;
+}
+```
+
+到这里已经完成了应用的大框架。总结一下就是，游戏中出现的蛇、食物等元素，都属于 `Observer`，它们控制各自的状态、渲染和销毁的过程；而 `Subject` 则负责告诉 `Observer` 什么时候去做这些事情。
+> ：那 `Subject` 怎么知道的什么时候去做呢？  
+> ：Action 通知它的啊【斜眼笑】。
+
+## 蛇的控制

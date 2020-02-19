@@ -1,0 +1,32 @@
+---
+layout: page
+title: 朋友们
+permalink: /friends/
+header_icon: "fas fa-envelope text-link"
+tag: friends
+---
+<div class="padding-page">
+  {%- assign link = "mailto:" | append: site.email -%}
+  {%- include /public/page-header.html icon="user-friends" color="base02" link=link link_text='邮件联系' -%}
+
+  <ul class="padding-page friends">
+    {%- if site.friends.size > 0 -%}
+    {%- for friend in site.friends -%}
+      <li class="list-type-none friend">
+        <a class="link-dark text-decoration-none friend-link" data-word="{{ friend[3] }}" target="_blank" href="{{ friend[1] }}">
+          <div class="friend-header">
+            <img class="image" src="{{ friend[2] }}" alt="{{ friend[0] }}" title="{{ friend[0] }}" />
+          </div>
+          <h2 class="text-center text-bold" title="{{ friend[0] }}">{{ friend[0] }}</h2>
+        </a>
+      </li>
+    {%- endfor -%}
+    {%- endif %}
+  </ul>
+</div>
+<script>
+  $('.friends .friend-link').click(function() {
+    var word = $(this).data('word');
+    alert(word);
+  });
+</script>
