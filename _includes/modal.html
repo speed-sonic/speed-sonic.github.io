@@ -8,6 +8,7 @@
     你好。
   </div>
   <div class="func">
+    <a class="cancel btn text-primary bg-link" id="modal-to" target="_blank" href="#">主页</a>
     <a class="cancel btn text-pencil-sec" href="#">取消</a>
   </div>
 </div>
@@ -15,4 +16,11 @@
   $('.close, .cancel').click(function() {
     $('#modal-wrapper, #modal').hide();
   });
+
+  window.modal = function(title, text, url) {
+    $('#modal-wrapper, #modal').show();
+    $('#modal .modal-header').text(title);
+    $('#modal .modal-body').text(text);
+    $('#modal-to').prop('href', url);
+  };
 </script>
