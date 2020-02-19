@@ -3,7 +3,7 @@ layout: page
 ---
 <div id="tags" class="padding-page">
   {%- assign data = site[page.source] -%}
-  {%- include public/page-header.html icon=page.title_icon color=page.title_color -%}
+  {%- include public/page-header.html icon=page.title_icon color=page.title_color link_icon="rss" link_icon_color="coral" link='/feed.rss' link_text='订阅我的 RSS' -%}
 
   <div class="tags-group text-smaller" style="padding:1rem 1rem 0 0;">
   {% include /public/tag-buttons.html source=page.source %}

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 文章
+header_icon: "fas fa-rss text-coral"
 styles: [articles.css]
 tag: articles
 ---
@@ -11,8 +12,8 @@ tag: articles
     {% assign posts = site.posts %}
   {% endif %}
 
+  {%- include /public/page-header.html icon="feather" color="base02" link='/feed.rss' link_text='订阅我的 RSS' -%}
   {%- if posts.size > 0 -%}
-    {%- include public/page-header.html icon="feather" color="base02" -%}
     <ul class="padding-page">
       {%- assign date_format = "%Y-%m-%d" -%}
       {%- for post in posts -%}

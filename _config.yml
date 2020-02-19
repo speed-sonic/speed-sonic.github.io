@@ -25,6 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 username: Alex
+github_url: https://github.com/speed-sonic
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  speed-sonic
@@ -72,20 +73,19 @@ news:
   - [
     新出炉的“贪吃蛇大作战”（简陋版）,
     "/works/snake/",
-    "/assets/image/t3.png",
+    "/assets/image/works/snake.jpg",
     "疫情期间无所事事，打法时间全靠它！前前后后肝了近4天，终于到了能玩的程度了。这次也算是体验到了做游戏的不易啊(T_T)。快来体验一下吧"
   ]
-  - [
-    一些主流的产品发布策略,
-    "/articles/主流的产品发布策略总结/",
-    "/assets/image/t4.png",
-    "灰度发布（又名金丝雀发布）是指在黑与白之间，能够平滑过渡的一种发布方式。及早获得用户的意见反馈，完善产品功能，提升产品质量 让用户参与产品测试，加强与用户互动 降低产品升级所影响的用户范围。"
-  ]
 
-social_links:
-  twitter: jekyllrb
-  github:  jekyll
-  rss: rss
+works:
+  - [
+    贪吃蛇大作战,
+    "/assets/image/works/snake.jpg",
+    "通过转动虚拟摇杆控制蛇的运动，不断吃掉周围的食物然后变大，注意不要碰到四周的墙壁哦～",
+    "https://speed-sonic.github.io/snake/client/dist/",
+    "/articles/",
+    "2020-02-05"
+  ]
 
 # Exclude from processing.
 # The following items will not be processed, by default.

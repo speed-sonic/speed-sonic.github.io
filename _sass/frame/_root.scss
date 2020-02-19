@@ -55,6 +55,10 @@ $_borders: (
   user-select: none;
 }
 
+.d-block {
+  display: block;
+}
+
 .clear {
   clear: both;
 }
@@ -103,8 +107,8 @@ a.text-decoration-none {
   @extend .text-center;
   @extend .user-select-none;
   vertical-align: middle;
-  margin-top: .25rem;
-  margin-bottom: .25rem;
+  // margin-top: .25rem;
+  // margin-bottom: .25rem;
   display: inline-block;
   border: 1px solid $brand-color-light;
   padding: .375rem .75rem;
@@ -113,4 +117,9 @@ a.text-decoration-none {
   border-radius: .25rem;
   -webkit-appearance: button;
   cursor: pointer;
+  margin: .25rem .1rem;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }

@@ -10,11 +10,11 @@
   </h1>
   <a
     class="rss-button border text-decoration-none text-{{ include.color }}"
-    href="{{ '/feed.rss' | relative_url }}"
+    href="{{ include.link | relative_url }}"
     target="_blank"
   >
-    <i class="fas fa-rss text-coral"></i>
-    订阅我的 RSS
+    <i class="{{ page.header_icon }}"></i>
+    {{ include.link_text }}
   </a>
 </div>
 {%- endif -%}

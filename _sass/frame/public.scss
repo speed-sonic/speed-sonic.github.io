@@ -68,7 +68,7 @@
   }
 }
 
-.post-list, .news-board .news {
+.post-list, .notices-board .notices {
   padding: 1rem 0;
 }
 
@@ -82,10 +82,14 @@
   }
 }
 
-.news-board {
-  .news {
+.notices-board {
+  .notices {
     &:not(:last-child) {
       @extend .border-bottom;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
     }
     .title {
       font-size: 1.2rem;

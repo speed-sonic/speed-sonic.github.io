@@ -1,8 +1,30 @@
 ---
 layout: page
 permalink: /works/
+title: 作品集
+header_icon: "fab fa-github text-pencel"
 tag: works
 ---
 <div class="padding-page">
-  
+  {%- include /public/page-header.html icon="robot" color="base02" link=site.github_url link_text='我的 Github' -%}
+  <div class="notices-board padding-page">
+    {%- for news in site.works -%}
+    {%- assign title = news[0] -%}
+    {%- assign image = news[1] -%}
+    {%- assign excerpt = news[2] -%}
+    {%- assign project_url = news[3] -%}
+    {%- assign url = news[4] -%}
+    {%- assign detail_url = news[4] -%}
+    {%- assign date = news[5] -%}
+    {%- include /public/notice.html
+      title=title
+      url=url
+      image=image
+      excerpt=excerpt
+      project_url=project_url
+      detail_url=detail_url
+      date=date
+    -%}
+    {%- endfor -%}
+  </div>
 </div>
