@@ -8,10 +8,13 @@
   </h3>
   <!-- 摘要 -->
   {%- if site.show_excerpts -%}
-  <span class="text-pencil-sec text-small">{{ post.excerpt }}</span>
+  <span class="text-pencil-sec text-small">
+    {{ post.excerpt }}
+  </span>
   {%- endif -%}
   <div class="text-smaller">
     {%- include /public/post-tags.html source="categories" icon="paperclip" color="silver" -%}
+    <a class="link float-right" href="{{ post.url | relative_url }}">进入文章</a>
     {%- include /public/post-tags.html source="tags" icon="tag" color="coral" -%}
   </div>
 </li>

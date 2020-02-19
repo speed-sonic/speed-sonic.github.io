@@ -68,17 +68,22 @@
   }
 }
 
+.post-list, .news-board .news {
+  padding: 1rem 0;
+}
+
 .post-list {
-  padding:1rem 0;
   &:not(:last-child) {
     @extend .border-bottom;
   }
-}
 
+  .post-meta {
+    font-size: 14px;
+  }
+}
 
 .news-board {
   .news {
-    padding: 1rem 0;
     &:not(:last-child) {
       @extend .border-bottom;
     }
@@ -95,7 +100,7 @@
       }
       .col {
         height: auto;
-        color: #828282;
+        color: #6b6b6b;
         &.left {
           flex: none;
           width: 20%;

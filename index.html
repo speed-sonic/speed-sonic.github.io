@@ -7,18 +7,34 @@ tag: home
     <div class="content">
       <h1 class="view text-light">雨打梨花深闭门，忘了青春，误了青春。</h1>
       <div class="navigator">
-        <a class="btn text-bold text-primary bg-cyan" href="{{ '/articles' | relative_url }}">文章</a>
-        <a class="btn text-bold text-primary bg-silver" href="{{ '/articles' | relative_url }}">作品</a>
-        <a class="btn text-bold text-primary bg-dodger" href="{{ '/articles' | relative_url }}">涂鸦墙</a>
+        <a class="btn text-bold text-primary bg-dodger" href="{{ '/articles' | relative_url }}">文章</a>
+        <a class="btn text-bold text-pencil bg-primary" href="{{ '/articles' | relative_url }}">作品</a>
+        <a class="btn text-bold text-pencil bg-primary" href="{{ '/articles' | relative_url }}">涂鸦墙</a>
       </div>
     </div>
   </div>
 
   <div class="container dashboard">
     <div class="content">
+      <!-- 文章 -->
+      <div class="integrated">
+        <h2 class="text-title text-link-hover">
+          <i class="fas fa-pen-alt"></i> 新文章
+          <a style="font-size:1rem;" class="float-right text-normal link-dark" href="{{ '/articles/' | relative_url }}">更多</a>
+        </h2>
+        {% assign posts = site.posts | sort: 'date' | slice: 0, 4 %}
+        {%- if posts.size > 0 -%}
+        <ul class="article-list">
+          {%- assign date_format = "%Y-%m-%d" -%}
+          {%- for post in posts -%}
+          {%- include /public/article-card.html -%}
+          {%- endfor -%}
+        </ul>
+        {% endif %}
+      </div>
       <!-- 综合展示 -->
       <div class="integrated">
-        <h2 class="text-title text-base0"><i class="fas fa-magic"></i> 新鲜事</h2>
+        <h2 class="text-title text-cyan"><i class="fas fa-magic"></i> 新鲜事</h2>
         {%- include /news.html -%}
       </div>
     </div>
