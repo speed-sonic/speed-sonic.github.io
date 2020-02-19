@@ -1,0 +1,29 @@
+<div class="notices">
+  <h2 class="title">
+    <a class="link-dark text-decoration-none text-bold" href="{{ include.url | relative_url }}">
+      {{ include.title }}
+    </a>
+    {%- if include.date -%}
+      <time class="text-smaller text-italic text-pencil-sec time float-right" datetime="{{ include.date }}">
+        {{ include.date }}
+      </time>
+    {%- endif -%}
+  </h2>
+  <div class="row">
+    <div class="col left">
+      <img src="{{ include.image }}" alt="{{ include.title }}" title="{{ include.title }}" />
+    </div>
+    <div class="col info">
+      <p class="view text-small">
+        {{ include.excerpt }}
+      </p>
+      <div class="flex-grow"></div>
+      <div>
+        {%- if include.project_url -%}
+        <a class="btn link text-bold text-primary bg-dodger" target="_blank" href="{{ include.project_url }}">进入</a>
+        {%- endif -%}
+        <a class="btn link text-bold text-pencil bg-primary" href="{{ include.detail_url | relative_url }}">详情</a>
+      </div>
+    </div>
+  </div>
+</div>
