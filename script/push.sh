@@ -20,4 +20,6 @@ if [[ "$isCommit" =~ ^(y|yes)$ ]]; then
         commitText="update";
     fi
     gitPush $commitText;
+
+    echo -e "\n\ndone."
 fi
