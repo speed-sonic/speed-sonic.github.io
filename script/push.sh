@@ -1,13 +1,23 @@
 #!/bin/bash
 
+gitPush() {
+    commitText=$1;
+    echo "=======" $commitText "========";
+    git add .;
+    git commit -m $commitText;
+    git push origin master;
+}
+
 git status;
 
-commitText="update";
-if [ -n "$1" ]; then
-    commitText=$1;
-fi
+echo -e "\n\nSubmit or not? (y|yes or other key)"
+read isCommit;
 
-echo "=======" $commitText "========";
-git add .;
-git commit -m $commitText;
-git push origin master;
+if [[ "$isCommit" =~ ^(y|yes)$ ]]; then
+    echo "Commit message:"
+    read commitText;
+    if [ -z "$commitText" ]; then
+        commitText="update";
+    fi
+    gitPush $commitText;
+fi
