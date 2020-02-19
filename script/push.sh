@@ -1,4 +1,10 @@
 #!/bin/bash
 
-git commit -am "update"
-git push origin master
+git add .;
+commitText="update";
+if [ -n "$1" ]; then
+    commitText=$1;
+fi
+
+git commit -m $commitText;
+git push origin master;
