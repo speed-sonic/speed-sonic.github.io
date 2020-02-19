@@ -17,18 +17,6 @@ tag: home
   <div class="container dashboard">
     <div class="content">
       <!-- 文章 -->
-      <div class="integrated">
-        {%- include public/board-header.html text="新文章" color="link-hover" url="/articles/" -%}
-        {% assign posts = site.posts | sort: 'date' | slice: 0, 4 %}
-        {%- if posts.size > 0 -%}
-        <ul class="article-list">
-          {%- assign date_format = "%Y-%m-%d" -%}
-          {%- for post in posts -%}
-          {%- include public/article-card.html -%}
-          {%- endfor -%}
-        </ul>
-        {% endif %}
-      </div>
       <!-- 综合展示 -->
       <div class="integrated">
       </div>
