@@ -31,18 +31,6 @@ tag: home
       </div>
       <!-- 综合展示 -->
       <div class="integrated">
-        {%- include public/board-header.html text="新鲜事" color="cyan" -%}
-        <div class="notices-board">
-          {%- for news in site.news -%}
-          {%- assign title = news[0] -%}
-          {%- assign url = news[1] -%}
-          {%- assign image = news[2] -%}
-          {%- assign excerpt = news[3] -%}
-          {%- assign detail_url = news[1] -%}
-          {%- assign project_url = news[4] -%}
-          {%- include public/notice.html title=title url=url image=image excerpt=excerpt detail_url=detail_url project_url=project_url -%}
-          {%- endfor -%}
-        </div>
       </div>
     </div>
   </div>
