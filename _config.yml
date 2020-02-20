@@ -27,7 +27,7 @@ username: Alex
 motto: 怖くないわけない，でも止まんない
 github_url: https://github.com/speed-sonic
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://speed-sonic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.about-alex.top" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  speed-sonic
 show_excerpts: true
 paginate: 6
@@ -90,7 +90,7 @@ works:
   - [
     贪吃蛇大作战,
     "/assets/image/works/snake.jpg",
-    "做了一个比较简陋当仿制品。转动虚拟摇杆控制蛇的运动，通过不断吃掉周围的食物，增加蛇身的长度，当蛇碰到四周当墙壁后游戏结束。以后还会进一步增加游戏元素。",
+    "做了一个比较简陋的仿制品。转动虚拟摇杆控制蛇的运动，通过不断吃掉周围的食物，增加蛇身的长度，当蛇碰到四周当墙壁后游戏结束。以后还会进一步增加游戏元素。",
     "https://speed-sonic.github.io/snake/client/dist/",
     "/游戏制作/前端/2020/02/19/Canvas-小游戏-贪吃蛇大作战-的制作过程.html",
     "2020-02-05"
