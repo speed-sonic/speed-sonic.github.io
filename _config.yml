@@ -110,6 +110,14 @@ works:
     "/后端/架构/2019/11/28/Fluff-Micro-Framework.html",
     "2019-11-28"
   ]
+  - [
+    跳跃涂鸦,
+    "/assets/image/works/doodle-jump.jpg",
+    "仿造跳跃涂鸦（doodle-jump）的一个小游戏，利用 javascript 的重力设备接口进行方向操控的益智类游戏。",
+    "https://speed-sonic.github.io/game-doodle-jump/",
+    "/游戏制作/前端/2019/12/25/canvas-game-doodle-jump.html",
+    "2019-12-25"
+  ]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
