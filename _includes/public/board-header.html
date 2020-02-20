@@ -1,5 +1,5 @@
 <h2 class="text-title text-{{ include.color }}">
-  <i class="fas fa-pen-alt"></i> {{ include.text }}
+  <i class="fas fa-{{ include.icon }}"></i> {{ include.text }}
   {%- if include.url -%}
   <a style="font-size:1rem;" class="float-right text-normal link" href="{{ include.url | relative_url }}">更多</a>
   {%- endif -%}

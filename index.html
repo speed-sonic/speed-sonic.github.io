@@ -18,7 +18,7 @@ tag: home
     <div class="content">
       <!-- 文章 -->
       <div class="integrated">
-        {%- include /public/board-header.html text="新文章" color="link-hover" url="/articles/" -%}
+        {%- include /public/board-header.html text="新文章" color="link-hover" url="/articles/" icon="pen-alt" -%}
         {% assign posts = site.posts | sort: 'date' | reverse | slice: 0, 4 %}
         {%- if posts.size > 0 -%}
         <ul class="article-list">
@@ -31,7 +31,7 @@ tag: home
       </div>
       <!-- 综合展示 -->
       <div class="integrated">
-        {%- include /public/board-header.html text="新鲜事" color="cyan" -%}
+        {%- include /public/board-header.html text="新鲜事" color="cyan" icon="magic" -%}
         <div class="notices-board">
           {%- for news in site.news -%}
           {%- assign title = news[0] -%}
