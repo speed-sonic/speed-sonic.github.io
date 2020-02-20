@@ -78,7 +78,7 @@ news:
   ]
   - [
     新出炉的“贪吃蛇大作战”（简约版）,
-    "/游戏制作/前端/2020/02/19/Canvas-小游戏-贪吃蛇大作战-的制作过程.html",
+    "/游戏制作/前端/2020/02/19/canvas-game-snake.html",
     "/assets/image/works/snake.jpg",
     "疫情期间无所事事，打法时间全靠它！前前后后肝了近4天，终于到了能玩的程度了。这次也算是体验到了做游戏的不易啊(T_T)。快来体验一下吧",
     "https://speed-sonic.github.io/snake/client/dist/",
@@ -91,7 +91,7 @@ works:
     "/assets/image/works/snake.jpg",
     "做了一个比较简陋的仿制品。转动虚拟摇杆控制蛇的运动，通过不断吃掉周围的食物，增加蛇身的长度，当蛇碰到四周当墙壁后游戏结束。",
     "https://speed-sonic.github.io/snake/client/dist/",
-    "/游戏制作/前端/2020/02/19/Canvas-小游戏-贪吃蛇大作战-的制作过程.html",
+    "/游戏制作/前端/2020/02/19/canvas-game-snake.html",
     "2020-02-05"
   ]
   - [
