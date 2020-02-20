@@ -1,5 +1,5 @@
-# speed-sonic.github.io
-This is my blog
+# Alex 的个人博客
+https://www.about-alex.top/
 
 ## 在本地运行和测试
 安装 ruby，然后按照下面的命令构建系统：
