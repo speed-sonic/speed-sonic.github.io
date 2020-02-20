@@ -30,7 +30,7 @@ tag: friends
     var name = $(this).data('name');
     var word = $(this).data('word');
     var url = $(this).data('url');
-    modal(name+'：', word, function(e) {
+    modal(name+'：', word, '前往主页', function(e) {
       $(this).prop('href', url);
     });
   });

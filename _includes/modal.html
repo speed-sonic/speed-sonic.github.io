@@ -9,7 +9,7 @@
       你好。
     </div>
     <div class="func">
-      <a class="btn text-primary bg-link" id="modal-to" target="_blank" href="#">主页</a>
+      <a class="btn text-primary bg-link access" id="modal-to" target="_blank" href="#"></a>
       <a class="cancel btn text-pencil-sec" href="#">取消</a>
     </div>
   </div>
@@ -21,10 +21,11 @@
     $('#modal-wrapper').hide();
   });
 
-  window.modal = function(title, text, callback) {
+  window.modal = function(title, text, btnText, callback) {
     $('#modal-wrapper').show();
     $('#modal .modal-title').text(title);
     $('#modal .modal-body').text(text);
+    $('.access').text(btnText);
     $('#modal-to').click(callback);
   };
 </script>
