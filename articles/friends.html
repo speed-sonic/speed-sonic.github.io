@@ -2,12 +2,12 @@
 layout: page
 title: 朋友们
 permalink: /friends/
-header_icon: "fas fa-envelope text-link"
+header_icon: "fas fa-link text-link"
 tag: friends
 ---
 <div class="padding-page">
-  {%- assign link = "mailto:" | append: site.email -%}
-  {%- include /public/page-header.html icon="user-friends" color="base02" link=link link_text='邮件联系' -%}
+  {%- assign link = "/me/" | relative_url -%}
+  {%- include /public/page-header.html icon="user-friends" color="base02" link=link link_text='交换友链' -%}
 
   <ul class="padding-page friends">
     {%- if site.friends.size > 0 -%}
@@ -30,6 +30,8 @@ tag: friends
     var name = $(this).data('name');
     var word = $(this).data('word');
     var url = $(this).data('url');
-    modal(name+'：', word, url);
+    modal(name+'：', word, function(e) {
+      $(this).prop('href', url);
+    });
   });
 </script>

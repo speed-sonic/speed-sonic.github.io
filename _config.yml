@@ -18,16 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Stephanie
-email: omytty.alex@gmail.com
+title: Alexspace
+email: omytty@126.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  这里是 Alex 的个人博客，这里的一切都是 Alex 的，Alex 喜欢看动漫，Alex 喜欢软科幻，
+  Alex 还爱吃橙子，Alex 正在找寻找喜欢的人。如果你对 Alex 感兴趣，请发邮件给 Alex，询问他的QQ号...
 username: Alex
+motto: 怖くないわけない，でも止まんない
 github_url: https://github.com/speed-sonic
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://speed-sonic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  speed-sonic
 show_excerpts: true
 paginate: 6
@@ -57,16 +57,19 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+# 朋友
 friends:
-  - ['Alex', 'http://alex.cn', '/assets/image/mime/header.jpg', '扣妮起哇']
+  - ['Alex', '/', '/assets/image/mime/header.jpg', '怖くないわけない，でも止まんない']
 
+# 导航栏
 navlinks:
   - [文章, "/articles/", articles]
   - [作品集, "/works/", works]
   # - [阅读, "#", "read"]
   - [朋友们, "/friends/", "friends"]
-  - [Alex, "/me/", "me"]
+  - [我, "/me/", "me"]
 
+# 新鲜事
 news:
   - [
     涂鸦墙来袭，小伙伴们，快来互相伤害吧！,
@@ -82,6 +85,7 @@ news:
     "https://speed-sonic.github.io/snake/client/dist/",
   ]
 
+# 作品
 works:
   - [
     贪吃蛇大作战,

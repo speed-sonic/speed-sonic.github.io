@@ -1,0 +1,49 @@
+---
+layout: page
+title: "我的主页"
+permalink: /me/
+tag: me
+---
+<div class="me padding-page">
+  <div class="cover">
+  </div>
+  <div class="me-content">
+    <img class="live image" src="/assets/image/mime/header.jpg" />
+    <ul class="info-box">
+      <div class="header"><p class="text-bold float-left">{{ site.username }}</p><span class="sec text-normal text-small text-grey">{{ site.motto }}</span></div>
+      <li class="list-type-none text-small">
+        <span class="text-bold key">电子邮箱</span>
+        <span class="value">
+          <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </span>
+      </li>
+      <li class="list-type-none text-small">
+        <span class="text-bold key">Github</span>
+        <span class="value">
+          <a class="link" href="{{ site.github_url }}">{{ site.github_url }}</a>
+        </span>
+      </li>
+      <li class="list-type-none text-small">
+        <span class="text-bold key">愿望</span>
+        <span class="value">
+          拥有一台带独显的电脑
+        </span>
+      </li>
+      <li class="list-type-none text-small">
+        <span class="text-bold key">喜欢吃</span>
+        <span class="value">
+          橙子🍊
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div class="message text-small">
+    欢迎交换博客友情链接，请将您的网址、称呼、头像、座右铭（可选）发送到我的邮箱。<br />
+    <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a><br /><br />
+    <p class="text-bold">以下是我的信息：</p>
+    网址：{{ site.url }}<br />
+    称呼：{{ site.username }}<br />
+    头像：<a class="link" target="_blank" href="{{ '/assets/image/mime/header.jpg' | relative_url }}">获取头像</a><br />
+    座右铭：{{ site.motto }}
+  </div>
+</div>

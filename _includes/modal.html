@@ -1,26 +1,32 @@
-<div class="modal-wrapper" id="modal-wrapper"></div>
-<div class="modal bg-primary" id="modal">
-  <div class="modal-header text-pencil text-bold border-bottom">
-    通知
-    <a class="close text-pencil float-right text-decoration-none" href="#">X</a>
-  </div>
-  <div class="modal-body break-word">
-    你好。
-  </div>
-  <div class="func">
-    <a class="cancel btn text-primary bg-link" id="modal-to" target="_blank" href="#">主页</a>
-    <a class="cancel btn text-pencil-sec" href="#">取消</a>
+<div class="modal-wrapper" id="modal-wrapper">
+<div class="modal" id="modal">
+  <div class="modal-content bg-primary">
+    <div class="modal-header text-pencil text-bold border-bottom">
+      <span class="modal-title">通知</span>
+      <a class="close text-pencil-sec float-right text-decoration-none text-center" href="#">&times;</a>
+    </div>
+    <div class="modal-body break-word">
+      你好。
+    </div>
+    <div class="func">
+      <a class="btn text-primary bg-link" id="modal-to" target="_blank" href="#">主页</a>
+      <a class="cancel btn text-pencil-sec" href="#">取消</a>
+    </div>
   </div>
 </div>
+
 <script>
-  $('.close, .cancel').click(function() {
-    $('#modal-wrapper, #modal').hide();
+  $('.close, .cancel').click(function(e) {
+    e.preventDefault();
+    $('#modal-wrapper').hide();
   });
 
-  window.modal = function(title, text, url) {
-    $('#modal-wrapper, #modal').show();
-    $('#modal .modal-header').text(title);
+  window.modal = function(title, text, callback) {
+    $('#modal-wrapper').show();
+    $('#modal .modal-title').text(title);
     $('#modal .modal-body').text(text);
-    $('#modal-to').prop('href', url);
+    $('#modal-to').click(callback);
   };
 </script>
+
+</div>

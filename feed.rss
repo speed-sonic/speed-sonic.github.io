@@ -8,7 +8,7 @@ layout: blank
         <link>{{ site.url }}</link>
         <description>{{ site.description }}</description>
         <language>zh-cn</language>
-        <copyright>Copyright Alex</copyright>
+        <copyright>Copyright {{ site.username }}</copyright>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <managingEditor>{{ site.email }}</managingEditor>
         <webMaster>{{ site.email }}</webMaster>
