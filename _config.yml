@@ -95,6 +95,22 @@ works:
     "/游戏制作/前端/2020/02/19/Canvas-小游戏-贪吃蛇大作战-的制作过程.html",
     "2020-02-05"
   ]
+  - [
+    Fluff Micro Framework,
+    "/assets/image/works/fluff-framework.png",
+    "Fluff 是一款为 web 应用打造的微框架。整合当今主流的实践标准和先进的架构模式，帮助你灵活的构建应用程序。简约高效的架构使你的应用程序快如闪电，标准化的方案让你的开发效率大幅提高！",
+    "https://www.fluff-framework.cn/",
+    "http://127.0.0.1:4000/后端/架构/2019/11/28/Fluff-Micro-Framework.html",
+    "2019-11-28"
+  ]
+  - [
+    Jet Escaper,
+    "/assets/image/works/jet-escaper.jpeg",
+    "一个生存类 H5 小游戏，摇杆控制飞机躲避源源不断的敌军阻击，拾取掉落的物品并击落敌机，尽力飞出更远的距离。",
+    "https://speed-sonic.github.io/game-jet-escaper/",
+    "/works/",
+    "2019-12-05"
+  ]
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -19,7 +19,7 @@ tag: home
       <!-- 文章 -->
       <div class="integrated">
         {%- include /public/board-header.html text="新文章" color="link-hover" url="/articles/" -%}
-        {% assign posts = site.posts | sort: 'date' | slice: 0, 4 %}
+        {% assign posts = site.posts | sort: 'date' | reverse | slice: 0, 4 %}
         {%- if posts.size > 0 -%}
         <ul class="article-list">
           {%- assign date_format = "%Y-%m-%d" -%}
