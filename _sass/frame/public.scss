@@ -115,11 +115,13 @@
 
 .friends {
   * {
-    border-radius: 1rem;
+    // border-radius: 1rem;
   }
   .friend {
     margin: 2.5%;
     width: 20%;
+    padding: .5rem;
+    border: 3px solid #EEE;
     .friend-header {
       position: relative;
       overflow: hidden;
@@ -127,6 +129,9 @@
       img {
         position: absolute;
       }
+    }
+    h2 {
+      margin-bottom: 0;
     }
     @include media-query($on-medium) {
       width: 40%;
