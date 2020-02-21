@@ -95,10 +95,12 @@
       max-width: 100%;
     }
     .row {
+      display: flex;
       @include media-query($on-medium) {
         display: block;
       }
       .col {
+        display: flex;
         color: #6b6b6b;
         &.left {
           width: 20%;
