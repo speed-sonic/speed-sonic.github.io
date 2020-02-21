@@ -29,3 +29,6 @@ malavika.ns.cloudflare.com
 ```
 
 SSL 到期时间：2020年10月9日 星期五 中国标准时间 下午8:00:00
+
+## Liquid 文档
+https://shopify.github.io/liquid/basics/introduction/

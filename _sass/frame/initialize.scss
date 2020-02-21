@@ -52,12 +52,11 @@ $on-large:         800px !default;
 @import
   "_root",
   "base",
-  "header",
   "highlights/current",
   "public",
   "post",
-  "home",
   "modal",
   "me",
-  "footer"
+  "components/header",
+  "components/footer"
 ;

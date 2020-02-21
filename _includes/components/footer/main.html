@@ -1,0 +1,27 @@
+<footer component="footer" class="container">
+  <div class="content">
+    <div class="margin-bottom-1 w-100 padding-top-2 border-top clear">
+      <div class="col w-50 float-left text-grey">
+        <h2 class="text-normal">{{ site.title | escape }}</h2>
+        <ul>
+          <li class="list-type-none text-normal">{{ site.username }}</li>
+          <li class="list-type-none">
+            <a class="link text-small text-decoration-none" href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col w-50 float-left text-grey text-small">
+        <p>{{ site.description | escape }}</p>
+      </div>
+    </div>
+    <div class="margin-bottom-1 w-100 clear">
+      <div class="text-center margin-auto">
+        {% assign feedHref = '/feed.rss' | relative_url %}
+        {% assign mailtoHref = 'mailto:' + site.email %}
+        {% include components/footer/SocialButton.html href=site.github_url iconClass="fab fa-github" %}
+        {% include components/footer/SocialButton.html href=feedHref iconClass="fas fa-rss" %}
+        {% include components/footer/SocialButton.html href=mailtoHref iconClass="fas fa-envelope" %}
+      </div>
+    </div>
+  </div>
+</footer>

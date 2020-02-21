@@ -2,8 +2,6 @@
   max-width: 500px;
   margin: 2.75rem auto;
   position: relative;
-  padding-left: 1rem;
-  padding-right: 1rem;
 
   .modal-content {
     position: relative;
@@ -12,8 +10,9 @@
     -ms-flex-direction: column;
     flex-direction: column;
     background-clip: padding-box;
-    border-radius: .5rem;
+    border-radius: 4px;
     outline: 0;
+    box-shadow: 1px 1px 1px 1px #EEE;
   }
 
   .modal-header, .close {
@@ -29,6 +28,7 @@
     min-height: 2rem;
     line-height: 2rem;
     padding: 1rem;
+    font-size: 1.2rem;
   }
 
   .func {

@@ -1,0 +1,46 @@
+[component="header"] {
+  $logo-font-size: 1.8rem;  // logo 文字大小
+  $small-link-size: 1rem;  // 小屏幕时导航链接文字大小
+  $link-size: 1.2rem;  // 大屏幕时导航链接文字大小
+
+  border-top: 4px solid $brand-color-dark;
+  line-height: $base-line-height * $base-font-size * 2.25;
+
+  .title {
+    color: $brand-color-dark;
+    font-size: $logo-font-size;
+    &:visited {
+      color: $brand-color-dark;
+    }
+  }
+
+  .nav-button .page-link {
+    font-size: $small-link-size;
+    &:not(:last-child) {margin-right: 0;}
+    &:hover {color: $brand-color-dark;}
+    &.active {
+      @extend .text-base00;
+      @extend .text-bold;
+    }
+  }
+
+  input:checked ~ .trigger {
+    @extend .d-block;
+  }
+
+  @media screen and (min-width: $on-medium) {
+    label[for="nav-trigger"], .menu-icon {
+      display: none;
+    }
+    input ~ .trigger {
+      display: block;
+      float: right;
+      clear: none;
+      .nav-button {
+        display: inline-block;
+        margin-left: 1.3rem;
+        .page-link {font-size: $link-size;}
+      }
+    }
+  }
+}

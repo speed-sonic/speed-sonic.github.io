@@ -2,9 +2,9 @@
 layout: page
 ---
 <article class="article-post padding-page">
-  <div class="post-header">
+  <div class="post-header padding-bottom-1">
     <h1 class="title">{{ page.title }}</h1>
-    <div class="post-info text-lightgrey text-small">
+    <div class="post-info text-lightgrey text-small padding-bottom-1">
       <span class="text-bold">创作于</span>
       {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -15,7 +15,6 @@ layout: page
       {%- include /public/post-tags.html source="tags" icon="tag" color="silver" -%}
     </span>
   </div>
-
   {{ content }}
 </article>
 

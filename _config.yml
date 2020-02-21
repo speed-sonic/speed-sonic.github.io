@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   这里是 Alex 的个人空间，这里的一切都是 Alex 的。如果你对 Alex 感兴趣，请发邮件给 Alex，甚至还可以询问他的QQ号...
 username: Alex
 motto: 怖くないわけない，でも止まんない
-github_url: https://github.com/speed-sonic
+github_url: https://github.com/speed-sonic/
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.about-alex.top" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  speed-sonic

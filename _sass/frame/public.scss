@@ -1,16 +1,12 @@
 .page-header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   .page-title {
     font-size: 2rem;
   }
   small {
     position: relative;
-    display: inline-block;
     bottom: 0;
     right: 0;
     font-size: 1rem;
-    padding-left: 1rem;
   }
   .rss-button {
     @extend .user-select-none;
@@ -44,24 +40,15 @@
 }
 
 .tag-item {
-  .item-content {
-    padding-left: 1rem;
-  }
-  .header {
+  .header, .hash {
     font-size: 1rem;
   }
-  .hash {
-    font-size: 1.7rem;
-    &:hover {
-      text-decoration: underline;
-    }
+  .hash:hover {
+    text-decoration: underline;
   }
-  article {
-    time.time {
-      margin-right: 2rem;
-      @include media-query($on-medium) {
-        display: block;
-      }
+  .time {
+    @include media-query($on-medium) {
+      display: block;
     }
   }
 }
@@ -96,53 +83,18 @@
       height: auto;
     }
     .row {
-      display: flex;
       @include media-query($on-medium) {
         display: block;
       }
       .col {
-        display: flex;
         color: #6b6b6b;
         &.left {
-          width: 20%;
-          margin-right: 1rem;
           @include media-query($on-medium) {
             display: block;
             width: auto;
             max-width: 60%;
           }
         }
-      }
-    }
-  }
-}
-
-.friends {
-  .friend {
-    margin: 2.5%;
-    width: 20%;
-    padding: .5rem;
-    border-radius: 8px;
-    border: 3px solid #EEE;
-    .friend-header {
-      position: relative;
-      overflow: hidden;
-      padding-bottom: 100%;
-      img {
-        position: absolute;
-      }
-    }
-    h2 {
-      margin-bottom: 0;
-    }
-    @include media-query($on-medium) {
-      width: 40%;
-      &:nth-child(even) {
-        margin-left: 10%;
-      }
-      margin-right: 0;
-      .image {
-        width: 100%;
       }
     }
   }

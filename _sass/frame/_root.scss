@@ -26,14 +26,6 @@ $font-sizes: (
   "bolder": bolder
 ) !default;
 
-// Border
-$_borders: (
-  "top",
-  "left",
-  "right",
-  "bottom"
-);
-
 // Display
 $_displays: (
   "block",
@@ -41,6 +33,24 @@ $_displays: (
   "inline",
   "inline-block",
   "flex"
+);
+
+// Positions
+$_pos: (
+  "-top",
+  "-bottom",
+  "-left",
+  "-right",
+  ""
+);
+
+// Proportions
+$proportions: (
+  0,
+  25,
+  50,
+  75,
+  100
 );
 
 
@@ -63,26 +73,43 @@ $_displays: (
   }
 }
 
-// Border
-@for $i from 1 through length($_borders) {
-  $var: nth($_borders, $i);
-  .border-#{$var} {
-    border-#{$var}: 1px solid $brand-color-light !important;
-  }
-
-  .border-darsh-#{$var} {
-    border-#{$var}: 1px dashed $brand-color-light !important;
+// Margin Padding
+@for $a from 1 through length($_pos) {
+  $var: nth($_pos, $a);
+  @for $i from 1 through 5 {
+    .margin#{$var}-#{$i} {
+      margin#{$var}: #{$i}#{'rem'};
+    }
+    .padding#{$var}-#{$i} {
+      padding#{$var}: #{$i}#{'rem'};
+    }
   }
 }
-.border {
-  border: 1px solid $brand-color-light !important;
+
+// Proportions
+@for $i from 1 through length($proportions) {
+  $var: nth($proportions, $i);
+  .w-#{$var} {
+    width: #{$var}#{'%'};
+  }
+  .h-#{$var} {
+    height: #{$var}#{'%'};
+  }
+}
+
+// Border
+@for $i from 1 through length($_pos) {
+  $var: nth($_pos, $i);
+  .border#{$var} {
+    border#{$var}: 1px solid $brand-color-light !important;
+  }
 }
 .border-none {
   border: 0 !important;
 }
 
 // Display
-@for $i from 1 through length($_borders) {
+@for $i from 1 through length($_displays) {
   $var: nth($_displays, $i);
   .d-#{$var} {
     display: #{$var};
@@ -143,8 +170,8 @@ li.list-type-none {
 .margin-auto {
   margin: 0 auto;
 }
-.w-100 {
-  width: 100%;
+.cursor-pointer {
+  cursor: pointer;
 }
 
 // Components

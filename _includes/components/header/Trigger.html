@@ -1,0 +1,18 @@
+<input type="checkbox" id="nav-trigger" class="nav-trigger d-none" />
+<label class="d-block float-right margin-right-1 cursor-pointer" for="nav-trigger">
+  {% include components/header/MenuIcon.html %}
+</label>
+
+<div class="trigger d-none bg-primary clear">
+  {%- for link in include.navlinks -%}
+  <div class="nav-button d-block margin-0">
+    {% assign classes = "page-link w-100 d-inline-block text-pencil-sec text-decoration-none" %}
+    {% if link[2] == include.tag %}
+    {% assign classes = classes | append: " active" %}
+    {% endif %}
+    <a class="{{ classes }}" href="{{ link[1] }}">
+      {{ link[0] }}
+    </a>
+  </div>
+  {%- endfor -%}
+</div>

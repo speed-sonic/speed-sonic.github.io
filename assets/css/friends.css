@@ -1,0 +1,35 @@
+.friend {
+  margin: 2.5%;
+  width: 20%;
+  padding: .5rem;
+  border-radius: 8px;
+  border: 3px solid #EEE;
+}
+
+.friend .friend-header {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+
+.friend-header img {
+  position: absolute;
+}
+
+.friend h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .friend {
+    width: 40%;
+    margin-right: 0;
+  }
+  .friend:nth-child(even) {
+    margin-left: 10%;
+  }
+  .friend .image {
+    width: 100%;
+  }
+}
