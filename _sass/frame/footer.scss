@@ -13,14 +13,9 @@ footer.site-footer {
   }
 
   .row {
-    clear: both;
-    width: 100%;
     margin-bottom: 1rem;
     .col {
-      float: left;
       width: 50%;
-      height: auto;
-      color: #828282;
       @include media-query($on-medium) {
         width: 100%;
       }
@@ -30,14 +25,9 @@ footer.site-footer {
     }
 
     .social-link {
-      display: inline-block;
       padding: 10px 15px;
       border-radius: 5px;
       border: 1px solid #e8e8e8;
-    }
-
-    .social-wrap {
-      text-align: center;
     }
   }
 }

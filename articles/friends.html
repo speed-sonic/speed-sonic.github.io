@@ -12,7 +12,7 @@ tag: friends
   <ul class="padding-page friends">
     {%- if site.friends.size > 0 -%}
     {%- for friend in site.friends -%}
-      <li class="list-type-none friend">
+      <li class="list-type-none friend d-inline-block">
         <a class="link-dark text-decoration-none friend-link" data-word="{{ friend[3] }}" data-name="{{ friend[0] }}" data-url="{{ friend[1] }}" target="_blank" href="#">
           <div class="friend-header">
             <img class="image" src="{{ friend[2] }}" alt="{{ friend[0] }}" title="{{ friend[0] }}" />

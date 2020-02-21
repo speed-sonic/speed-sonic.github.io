@@ -7,7 +7,7 @@
   </span>
 </label>
 
-<div class="trigger bg-primary">
+<div class="trigger bg-primary clear">
 
   {%- assign tag = "articles" -%}
   {%- if page.tag -%}
@@ -15,12 +15,12 @@
   {%- endif -%}
 
   {%- for link in site.navlinks -%}
-  <div class="nav-button">
+  <div class="nav-button d-block">
     {%- assign css = "" -%}
     {%- if link[2] == tag -%}
     {%- assign css = " active" -%}
     {%- endif -%}
-    <a class="page-link text-decoration-none{{ css }}" href="{{ link[1] }}">
+    <a class="page-link w-100 d-inline-block text-pencil-sec text-decoration-none{{ css }}" href="{{ link[1] }}">
       {{ link[0] }}
     </a>
   </div>

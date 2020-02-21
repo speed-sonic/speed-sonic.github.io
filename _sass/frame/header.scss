@@ -6,10 +6,8 @@ header.site-header {
   border-top: 4px solid $brand-color-dark;
   border-bottom: 1px solid $brand-color-light;
   line-height: $base-line-height * $base-font-size * 2.25;
-  width: 100%;
 
   a.site-title {
-    display: block;
     color: $brand-color-dark;
     font-size: $logo-font-size;
     &:visited {
@@ -42,17 +40,11 @@ header.site-header {
   }
 
   input ~ .trigger {
-    clear: both;
     display: none;
     .nav-button {
-      display: block;
       margin: 0;
       .page-link {
-        display: inline-block;
-        width: 100%;
-        color: $text-sec-color;
         font-size: $small-link-size;
-        // Gaps between nav items, but not on the last one
         &:not(:last-child) {
           margin-right: 0;
         }
@@ -85,7 +77,6 @@ header.site-header {
       display: block;
       float: right;
       clear: none;
-
       .nav-button {
         display: inline-block;
         margin-left: 1.3rem;

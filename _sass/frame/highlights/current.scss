@@ -1,5 +1,30 @@
 @import "tomorrow_night";
 
+/**
+ * Code formatting
+ */
+pre, code {
+  font-family: $code-font-family;
+  font-size: 0.9375em;
+  border: 1px solid $brand-color-light;
+  border-radius: 3px;
+}
+ 
+code {
+  padding: 1px 5px;
+}
+ 
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .highlighter-rouge {
   .highlight {
     border-color: #fafafa;

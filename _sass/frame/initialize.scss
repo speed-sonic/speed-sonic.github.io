@@ -1,5 +1,30 @@
 @charset "utf-8";
 
+$sol-base03:   #002b36;  // 15 -12 -12
+$sol-base02:   #073642;  // 20 -12 -12
+$sol-base01:   #586e75;  // 45 -07 -07
+$sol-base00:   #657b83;  // 50 -07 -07
+$sol-base0:    #839496;  // 60 -06 -03
+$sol-red:      #dc322f;  // 50  65  45
+$sol-cyan:     #2aa198;  // 60 -35 -05
+$color-pencil:       #1a1a1a;
+$color-primary:      #fdfdfd;
+$color-link:         #2a7ae2;
+$color-grey:   #828282;
+$color-silver:  #C0C0C0;
+$color-dodger: #1E90FF;
+
+$brand-color:           #828282 !default;
+$brand-color-light:     lighten($brand-color, 40%) !default;
+$brand-color-dark:      darken($brand-color, 25%) !default;
+
+$text-color:            $color-pencil !default;
+$text-sec-color:        lighten($text-color, 35%) !default;
+$background-color:      $color-primary !default;
+
+$link-base-color:       $color-link !default;
+$link-hover-color:    darken($link-base-color, 15%) !default;
+
 // Define defaults for each variable.
 
 @font-face {
@@ -23,32 +48,6 @@ $on-large:         800px !default;
     @content;
   }
 }
-
-/**
- * Code formatting
- */
- pre,
- code {
-   font-family: $code-font-family;
-   font-size: 0.9375em;
-   border: 1px solid $brand-color-light;
-   border-radius: 3px;
- }
- 
- code {
-   padding: 1px 5px;
- }
- 
- pre {
-   padding: 8px 12px;
-   overflow-x: auto;
- 
-   > code {
-     border: 0;
-     padding-right: 0;
-     padding-left: 0;
-   }
- }
 
 @import
   "_root",

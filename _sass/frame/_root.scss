@@ -1,3 +1,50 @@
+$theme-colors: (
+  "base03":   $sol-base03,
+  "base02":   $sol-base02,
+  "base01":   $sol-base01,
+  "base00":   $sol-base00,
+  "base0":    $sol-base0,
+  "cyan":     $sol-cyan,
+  "pencil":   $color-pencil,
+  "pencil-sec": $text-sec-color,
+  "primary":  $color-primary,
+  "link":     $color-link,
+  "link-hover": $link-hover-color,
+  "grey":         $color-grey,
+  "lightgrey": #8c8c8c,
+  "silver": $color-silver,
+  "coral": #F08080,
+  "dodger": $color-dodger,
+) !default;
+
+// 字体宽度
+$font-sizes: (
+  "lighter": lighter,
+  "light": 300,
+  "normal": 400,
+  "bold": 700,
+  "bolder": bolder
+) !default;
+
+// Border
+$_borders: (
+  "top",
+  "left",
+  "right",
+  "bottom"
+);
+
+// Display
+$_displays: (
+  "block",
+  "none",
+  "inline",
+  "inline-block",
+  "flex"
+);
+
+
+
 @each $color, $value in $theme-colors {
   .text-#{$color} {
     color: $value !important;
@@ -16,10 +63,7 @@
   }
 }
 
-$_borders: (
-  "top", "left", "right", "bottom"
-);
-
+// Border
 @for $i from 1 through length($_borders) {
   $var: nth($_borders, $i);
   .border-#{$var} {
@@ -36,79 +80,79 @@ $_borders: (
 .border-none {
   border: 0 !important;
 }
-.border-brand {
-  border-bottom: 1px solid $brand-color-light;
+
+// Display
+@for $i from 1 through length($_borders) {
+  $var: nth($_displays, $i);
+  .d-#{$var} {
+    display: #{$var};
+  }
 }
 
-.list-type-none {
-  list-style-type: none;
-}
-
-.float-left {
-  float: left;
-}
-.float-right {
-  float: right;
-}
-
-.user-select-none {
-  user-select: none;
-}
-
-.d-block {
-  display: block;
-}
-
-.clear {
-  clear: both;
-}
-
+// Text
 .text-small {
   font-size: .9em;
 }
 .text-smaller {
   font-size: .8em;
 }
-
 .text-indent-1 {
   text-indent: 1rem;
 }
-
 .text-center {
   text-align: center;
 }
-
-.break-word {
-  overflow-wrap: break-word;
-}
-
-.margin-auto {
-  margin: 0 auto;
-}
-
 .text-italic {
-  font-style:italic;
+  font-style: italic;
+}
+.text-title {
+  font-size: 1.3rem;
+  @extend .text-bold;
 }
 
+// Float
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+
+// Other
 a.text-decoration-none {
   text-decoration: none;
   &:hover {
     text-decoration: none;
   }
 }
-
-.text-title {
-  font-size: 1.3rem;
-  @extend .text-bold;
+.user-select-none {
+  user-select: none;
+}
+li.list-type-none {
+  list-style-type: none;
+}
+.break-word {
+  overflow-wrap: break-word;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.margin-auto {
+  margin: 0 auto;
+}
+.w-100 {
+  width: 100%;
 }
 
+// Components
 .btn {
   @extend .text-decoration-none;
   @extend .text-center;
   @extend .user-select-none;
   vertical-align: middle;
-  // margin-top: .25rem;
-  // margin-bottom: .25rem;
   display: inline-block;
   border: 1px solid $brand-color-light;
   padding: .375rem .75rem;
@@ -119,11 +163,6 @@ a.text-decoration-none {
   cursor: pointer;
   margin: .25rem .1rem;
 }
-
-.flex-grow {
-  flex-grow: 1;
-}
-
 .image {
   max-width: 100%;
   height: auto;
