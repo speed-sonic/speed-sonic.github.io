@@ -41,7 +41,7 @@ interface ActionInterface {
 
 到这里已经完成了应用的大框架。总结一下就是，游戏中出现的蛇、食物等元素，都属于 `Observer`，它们控制各自的状态、渲染和销毁的过程；而 `Subject` 则负责告诉 `Observer` 什么时候去做这些事情。
 ```
-问：那 `Subject` 怎么知道的什么时候去做呢？  
+问：那 Subject 怎么知道的什么时候去做呢？  
 答：Action 通知它的啊【斜眼笑】。
 ```
 
