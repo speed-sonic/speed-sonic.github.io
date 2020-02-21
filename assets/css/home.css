@@ -1,7 +1,7 @@
 .carousel {
     background: url('../image/boards/03.png') repeat left;
 }
-.content .view {
+.carousel .content .view {
     font-size: 2rem;
     filter: blur(.5px);
 }

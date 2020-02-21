@@ -41,7 +41,7 @@ styles: [home.css]
           {%- assign excerpt = news[3] -%}
           {%- assign detail_url = news[1] -%}
           {%- assign project_url = news[4] -%}
-          {%- include /public/notice.html title=title url=url image=image excerpt=excerpt detail_url=detail_url project_url=project_url -%}
+          {%- include public/notice.html title=title url=url image=image excerpt=excerpt detail_url=detail_url project_url=project_url -%}
           {%- endfor -%}
         </div>
       </div>
