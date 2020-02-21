@@ -93,6 +93,7 @@
     }
     img {
       max-width: 100%;
+      height: auto;
     }
     .row {
       display: flex;
@@ -106,6 +107,7 @@
           width: 20%;
           margin-right: 1rem;
           @include media-query($on-medium) {
+            display: block;
             width: auto;
             max-width: 60%;
           }
