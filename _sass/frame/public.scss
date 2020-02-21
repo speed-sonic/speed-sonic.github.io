@@ -120,6 +120,14 @@
   .friend {
     margin: 2.5%;
     width: 20%;
+    .friend-header {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 100%;
+      img {
+        position: absolute;
+      }
+    }
     @include media-query($on-medium) {
       width: 40%;
       &:nth-child(even) {
