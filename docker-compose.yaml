@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+    about_alex_ruby:
+        restart: always
+        container_name: about_alex_ruby
+        build: .
+        volumes: 
+            - .:/web
+        working_dir: '/web'
+        tty: true
+
+    about_alex_nginx:
+        restart: always
+        image: nginx:1.17.8-alpine
+        volumes: 
+            - .:/web
+            - ./docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+            - ./docker/nginx/logs:/var/log/nginx
+        depends_on:
+            - about_alex_ruby
+        environment:
+            VIRTUAL_HOST: about-alex.top,www.about-alex.top
+        ports:
+            - 80:80
+            - 443:443
