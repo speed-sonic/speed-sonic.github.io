@@ -1,7 +1,12 @@
-.main {
+.doodle-wall {
+  overflow-x: scroll;
+  padding: 2rem;
+}
+
+.main, #zhezhao {
   position: relative;
   width: 700px;
-  height: 450px;
+  height: 500px;
 }
 .frame {
   position: absolute;
@@ -11,4 +16,17 @@
 .auto-size {
   max-width: 100%;
   height: auto;
+}
+#zhezhao {
+  display: none;
+  background-color: rgba(255,255,255,.7);
+}
+
+.spinner {
+  font-size: 3rem;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -1.5rem;
+  margin-top: -1.5rem;
 }

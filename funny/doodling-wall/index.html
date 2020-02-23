@@ -4,11 +4,14 @@ title: 涂鸦墙
 tag: funny
 styles: [funny/doodling-wall.css]
 ---
-<div class="padding-page">
+<div class="padding-page doodle-wall">
   <div class="main" id="main">
     <img id="baseImage" class="frame auto-size" src="https://api.about-alex.top/doodle-image" alt="doodle image" crossorigin="anonymous" />
-    <div id="canvases" class="frame auto-size">
+    <div id="canvases" class="frame auto-size border">
       <!-- canvases -->
+    </div>
+    <div id="zhezhao">
+      <i class="fa fa-spinner fa-spin spinner"></i>
     </div>
   </div>
   <a id="submit" href="#">提交</a>
@@ -140,6 +143,7 @@ if (!HTMLCanvasElement.prototype.toBlob) {
 
 <script>
   var isPending = false;
+  var zhezhao = document.getElementById('zhezhao');
   var baseImage = document.getElementById('baseImage');
   var doodle = new Doodle(document.getElementById('canvases'));
   var xhr = new XMLHttpRequest();
@@ -152,6 +156,7 @@ if (!HTMLCanvasElement.prototype.toBlob) {
 
   baseImage.onload = function() {
     doodle.refresh();
+    zhezhao.style.display = 'none';
     isPending = false;
   }
 
@@ -166,6 +171,7 @@ if (!HTMLCanvasElement.prototype.toBlob) {
     event.preventDefault();
     if (! isPending) {
       isPending = true;
+      zhezhao.style.display = 'block';
       doodle.blob(function(blob) {
         uploadImage(blob);
       })
