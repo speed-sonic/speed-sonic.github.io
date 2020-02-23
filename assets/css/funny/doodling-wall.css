@@ -1,6 +1,7 @@
 .doodle-wall {
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .main, #zhezhao {
