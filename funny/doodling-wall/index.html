@@ -10,9 +10,8 @@ styles: [funny/doodling-wall.css]
     <div id="canvases" class="frame auto-size">
       <!-- canvases -->
     </div>
-    <canvas id="wubi" width="700" height="450" class="frame auto-size"></canvas>
   </div>
-    <a id="submit" href="#">提交</a>
+  <a id="submit" href="#">提交</a>
 </div>
 
 <script>
@@ -141,7 +140,6 @@ if (!HTMLCanvasElement.prototype.toBlob) {
 
 <script>
   var isPending = false;
-  var wubi = document.getElementById('wubi');
   var baseImage = document.getElementById('baseImage');
   var doodle = new Doodle(document.getElementById('canvases'));
   var xhr = new XMLHttpRequest();
@@ -154,7 +152,6 @@ if (!HTMLCanvasElement.prototype.toBlob) {
 
   baseImage.onload = function() {
     doodle.refresh();
-    wubi.style.display = 'none';
     isPending = false;
   }
 
@@ -169,7 +166,6 @@ if (!HTMLCanvasElement.prototype.toBlob) {
     event.preventDefault();
     if (! isPending) {
       isPending = true;
-      wubi.style.display = 'block';
       doodle.blob(function(blob) {
         uploadImage(blob);
       })
