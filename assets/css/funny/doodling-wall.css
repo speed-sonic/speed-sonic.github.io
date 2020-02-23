@@ -1,0 +1,13 @@
+.main {
+  /* position: relative; */
+  width: 100%;
+}
+.frame {
+  position: relative;
+  top:0;
+  left:0;
+}
+.auto-size {
+  max-width: 100%;
+  height: auto;
+}
