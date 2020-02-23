@@ -10,8 +10,8 @@ layout: page
   </div>
 
   <div class="margin-top-2">
-    {% for category in data %}
-      {% include /public/tag-item.html tag=category %}
+    {% for tag in data %}
+      {% include /public/tag-item.html tag=tag %}
     {% endfor %}
   </div>
 </div>
