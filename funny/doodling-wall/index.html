@@ -7,15 +7,16 @@ styles: [funny/doodling-wall.css]
 <div class="padding-page doodle-wall">
   <h2 class="text-bold">涂鸦墙</h2>
   <div class="main" id="main">
-    <img id="baseImage" class="frame auto-size" src="https://api.about-alex.top/doodle-image" alt="doodle image" crossorigin="anonymous" />
+    <img id="baseImage" class="auto-size" src="https://api.about-alex.top/doodle-image" alt="doodle image" crossorigin="anonymous" />
     <div id="canvases" class="frame auto-size border">
       <!-- canvases -->
     </div>
-    <div id="zhezhao">
+    <div id="zhezhao" class="w-100 h-100">
       <i class="fa fa-spinner fa-spin spinner"></i>
     </div>
   </div>
   <a id="submit" class="btn text-primary bg-link" href="#">画好了！</a>
+  <a id="clear-image" class="btn text-link bg-primary" href="#">清除</a>
 </div>
 
 <script>
@@ -177,5 +178,10 @@ if (!HTMLCanvasElement.prototype.toBlob) {
         uploadImage(blob);
       })
     }
+  }
+
+  document.getElementById('clear-image').onclick = function(event) {
+    event.preventDefault();
+    doodle.refresh();
   }
 </script>

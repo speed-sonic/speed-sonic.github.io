@@ -1,13 +1,9 @@
 .doodle-wall {
   overflow-x: auto;
-  padding: 2rem;
-  margin-bottom: 2rem;
 }
 
-.main, #zhezhao {
+.main {
   position: relative;
-  width: 700px;
-  height: 500px;
 }
 .frame {
   position: absolute;
@@ -19,6 +15,9 @@
   height: auto;
 }
 #zhezhao {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: none;
   background-color: rgba(255,255,255,.7);
 }
@@ -30,4 +29,8 @@
   top: 50%;
   margin-left: -1.5rem;
   margin-top: -1.5rem;
+}
+#canvases canvas {
+  max-width: 100%;
+  height: auto;
 }
